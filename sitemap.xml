@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://yourdomain.com/choi.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://yourdomain.com/gallery.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Events / Gig Guide -->
+  <url>
+    <loc>https://yourdomain.com/events.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Posters -->
+  <url>
+    <loc>https://yourdomain.com/poster.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Booking -->
+  <url>
+    <loc>https://yourdomain.com/booking.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Optional: Sections (for better SEO) -->
+  <url>
+    <loc>https://yourdomain.com/choi.html#about</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/choi.html#album-links</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/choi.html#contact</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
