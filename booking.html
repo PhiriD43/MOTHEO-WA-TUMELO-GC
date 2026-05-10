@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motheo Wa Tumelo Gospel Choir</title>
+
+<!-- Top-left logo -->
+<img src="T.logo.png" alt="Motheo Logo" class="logo-top">
+
+<!-- Bottom-right logo -->
+<img src="T.logo.png" alt="Motheo Logo" class="logo-bottom">
+
+<style>
+body {font-family: Arial; margin:0; background:#0f172a; color:white;}
+nav a {color:blue; margin:10px; text-decoration:none;}
+.hero {text-align:center; padding:80px 20px;}
+.section {padding:40px;}
+.card {background:#1e293b; padding:20px; margin:10px 0; border-radius:10px;}
+button {padding:10px 20px; margin:10px; border:none; background:gold; cursor:pointer;}
+input, textarea, select {width:100%; padding:10px; margin:10px 0;}
+.gallery img {width:200px; margin:10px; border-radius:10px;}
+.hidden {display:none;}
+
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('BackG1.png') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+/* Top-left logo */
+.logo-top {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 150px;  /* adjust size */
+  z-index: 1000;
+}
+
+/* Bottom-right logo */
+.logo-bottom {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 150px;  /* adjust size */
+  z-index: 1000;
+  opacity: 0.8; /* optional, slightly transparent */
+}
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+/* Container */
+.package-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.package-buttons button {
+  background: #f4f4f4;
+  border: 2px solid #0077cc;
+  color: #0077cc;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.package-buttons button:hover {
+  background: #0077cc;
+  color: white;
+}
+
+.package-buttons button.active {
+  background: #0077cc;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Info box */
+.package-info {
+  
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: #000; /* Black text */
+}
+.package-info h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.package-info ul li {
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.extra-btn {
+    padding:15px 25px;
+    border:none;
+    border-radius:8px;
+    background:#28a745; /* Green theme */
+    color:#fff;
+color: white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+  }
+  .extra-btn:hover {
+    background:#1e7e34;
+  }
+ 
+    .section {
+      margin: 40px auto;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .price-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .price-item {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input, textarea, select, button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    input, textarea, select {
+      width: 100%;
+    }
+
+    button {
+      background: #ff4081;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #e73370;
+    }
+
+
+
+.booking-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #020617, #0f172a);
+}
+
+.booking-container {
+    max-width: 1000px;
+    margin: auto;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(96,165,250,0.2);
+}
+
+.booking-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.booking-header h2 {
+    color: #60A5FA;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.booking-header p {
+    color: #cbd5e1;
+}
+
+/* GRID */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* INPUTS */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #60A5FA;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    padding: 14px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #60A5FA;
+    box-shadow: 0 0 15px rgba(96,165,250,0.5);
+}
+
+/* BUTTONS */
+.booking-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.submit-btn,
+.whatsapp-btn {
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 0 20px rgba(96,165,250,0.6);
+}
+
+.whatsapp-btn {
+    background: #16a34a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-btn:hover {
+    background: #15803d;
+}
+
+#form-status {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #60A5FA;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .booking-container {
+        padding: 25px;
+    }
+
+    .booking-header h2 {
+        font-size: 2rem;
+    }
+
+    .booking-buttons {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .whatsapp-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+<h1>Motheo Wa Tumelo Gospel Choir</h1>
+<h2><b>THE BLUE LIGHT💙🎶</b></h2>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="events.html">Gig Guide 2026</a>
+<a href="booking.html">Booking</a>
+
+</nav>
+</header>
+
+<!-- BOOKING -->
+<section id="booking" class="booking-section">
+    <div class="booking-container">
+
+        <div class="booking-header">
+            <h2>Book The Blue Light Choir 🎶</h2>
+            <p>
+                Fill in the form below to book Motheo Wa Tumelo Gospel Choir for your event.
+            </p>
+        </div>
+
+        <form id="bookingForm" class="booking-form">
+
+            <!-- PERSONAL INFO -->
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" placeholder="063 000 0000" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Event Type</label>
+                    <select name="event" required>
+                        <option value="">Select Event Type</option>
+                        <option>Wedding</option>
+                        <option>Church Service</option>
+                        <option>Funeral</option>
+                        <option>Festival</option>
+                        <option>Concert</option>
+                        <option>Community Event</option>
+                        <option>Birthday Celebration</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Event Date</label>
+                    <input type="date" name="date" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Event Time</label>
+                    <input type="time" name="time" required>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Venue / Location</label>
+                    <input type="text" name="location" placeholder="Enter event location" required>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Additional Information</label>
+                    <textarea name="message" rows="5" placeholder="Tell us more about your event..."></textarea>
+                </div>
+
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="booking-buttons">
+ <a href="https://wa.me/27636404100" target="_blank" class="whatsapp-btn">
+                    Book on WhatsApp
+                </a>
+            </div>
+<p id="form-status"></p>
+</form>
+</div>
+</section>
+
+<footer>
+<p>&copy;2026 MOTHEO WA TUMELO GC. All Rights Reserved.</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+ document.getElementById(id).scrollIntoView();
+}
+
+function submitBooking(e){
+ e.preventDefault();
+ alert("Booking saved (connect to database next)");
+}
+
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const status = document.getElementById("form-status");
+
+    status.innerHTML = "⏳ Sending booking request...";
+
+    setTimeout(() => {
+        status.innerHTML = "✅ Booking request sent successfully! We will contact you soon.";
+
+        this.reset();
+
+    }, 1500);
+});
+</script>
+
