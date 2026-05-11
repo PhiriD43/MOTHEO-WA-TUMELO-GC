@@ -427,12 +427,11 @@ color: white;
             </div>
 
             <!-- BUTTONS -->
-            <div class="booking-buttons">
- <a href="https://wa.me/27636404100" target="_blank" class="whatsapp-btn">
-                    Book on WhatsApp
-                </a>
-            </div>
-<p id="form-status"></p>
+              <div class="booking-buttons">
+    <button type="submit" class="submit-btn">
+        Book via WhatsApp
+    </button>
+</div>
 </form>
 </div>
 </section>
@@ -442,6 +441,51 @@ color: white;
 </footer>
 
 <script>
+
+      <script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    // GET FORM VALUES
+    let name = document.querySelector('input[name="name"]').value;
+    let email = document.querySelector('input[name="email"]').value;
+    let phone = document.querySelector('input[name="phone"]').value;
+    let eventType = document.querySelector('select[name="event"]').value;
+    let date = document.querySelector('input[name="date"]').value;
+    let time = document.querySelector('input[name="time"]').value;
+    let location = document.querySelector('input[name="location"]').value;
+    let message = document.querySelector('textarea[name="message"]').value;
+
+    // YOUR WHATSAPP NUMBER
+    let whatsappNumber = "27687005069";
+
+    // CREATE BOOKING MESSAGE
+    let bookingMessage =
+`🎶 *NEW CHOIR BOOKING REQUEST* 🎶
+
+👤 Full Name: ${name}
+📧 Email: ${email}
+📞 Phone: ${phone}
+
+🎤 Event Type: ${eventType}
+📅 Event Date: ${date}
+⏰ Event Time: ${time}
+📍 Venue: ${location}
+
+📝 Additional Information:
+${message}`;
+
+    // ENCODE MESSAGE
+    let encodedMessage = encodeURIComponent(bookingMessage);
+
+    // OPEN WHATSAPP
+    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+
+}
+                                                        
 function scrollToSection(id){
  document.getElementById(id).scrollIntoView();
 }
