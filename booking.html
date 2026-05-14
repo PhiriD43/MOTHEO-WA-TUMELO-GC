@@ -415,6 +415,11 @@ color: white;
                 <div class="input-group full-width">
                     <label>Venue / Location</label>
                     <input type="text" name="location" placeholder="Enter event location" required>
+
+                      <input type="text"
+                           name="location"
+                           placeholder="Enter venue location"
+                           required>
                 </div>
 
                 <div class="input-group full-width">
@@ -474,38 +479,19 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
 📝 Additional Information:
 ${message}`;
 
-    // ENCODE MESSAGE
-    let encodedMessage = encodeURIComponent(bookingMessage);
+      /* ENCODE MESSAGE */
 
-    // OPEN WHATSAPP
-    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    let encodedMessage =
+    encodeURIComponent(bookingMessage);
+
+    /* OPEN WHATSAPP */
+
+    let whatsappURL =
+    `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
     window.open(whatsappURL, "_blank");
 
-}
-                                                        
-function scrollToSection(id){
- document.getElementById(id).scrollIntoView();
-}
-
-function submitBooking(e){
- e.preventDefault();
- alert("Booking saved (connect to database next)");
-}
-
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const status = document.getElementById("form-status");
-
-    status.innerHTML = "⏳ Sending booking request...";
-
-    setTimeout(() => {
-        status.innerHTML = "✅ Booking request sent successfully! We will contact you soon.";
-
-        this.reset();
-
-    }, 1500);
 });
-</script>
 
+</script>
+   
